@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --bg-color:hsl(0, 0%, 100%);
+    --primary-text:hsl(234, 12%, 34%);
+    --secondary-text:hsl(212, 6%, 44%);
+    --Cyan:hsl(180, 62%, 55%);
+    --Red:hsl(0, 78%, 62%);
+    --Orange:hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+}
+body{
+    background-color: var(--bg-color);
+    font-size:15px ;
+    font-family: 'Poppins',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    color: var(--primary-text);
+}
+.container span{
+    font-size: 1.9rem;
+    font-weight: 200;
+    color: var(--primary-text);
+   
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width:90% ;
+    row-gap: 1rem;
+    height: auto;
+    padding-top: 200%;
+   
+}
+.container > p{
+    color: var(--primary-text);
+    width: 32ch;
+    font-weight: 400;
+
+}
+.card{
+    box-shadow: 0 0.2rem 10px 0 rgba(0, 0, 0, 30%);
+    border-radius: 2%;
+    padding: 2rem;
+    display: grid;
+    
+}
+img{
+    place-self: end;
+}
+.supervisor{
+    border-top: 5px solid var(--Cyan);
+
+}
+.team{
+    border-top: 5px solid var(--Red);
+
+}
+.karma{
+    border-top: 5px solid var(--Orange);
+
+}
+.calculator{
+    border-top: 5px solid var(--Blue);
+
+}
+.features{
+    place-content: center;
+    padding: 5%;
+    text-align: start;
+    display: grid;
+    grid-template-rows: repeat(4,15rem);
+    grid-template-columns: 90%;
+    row-gap: 2rem;
+}
+.features p{
+    color: var(--secondary-text);
+}
+@media screen and (min-width:768px) {
+    .container{
+        width:90% ;
+        row-gap: 1rem;
+        height: auto;
+        padding-top: 0;
+       
+    }
+    .container > p{
+        color: var(--primary-text);
+        width: 50ch;
+        font-weight: 400;
+        
+    
+    }
+    .features{
+        padding: 0px;
+        grid-template-rows: repeat(4,7rem);
+        grid-template-columns: repeat(3,minmax(10rem,25rem));
+        gap: 2rem;
+    }
+    .team{
+        grid-row: 1/ span 2;
+        grid-column: 2;
+    }
+    .supervisor{
+        grid-row: 2/ span 2;
+    }
+    .calculator{
+        grid-row: 2/ span 2;
+    }
+    .karma{
+        grid-row: 3/ span 2;
+    }
+}
